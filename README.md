@@ -1,26 +1,28 @@
-🧠 Multi-Agent Task Delegation System
+# 🧠 Multi-Agent Task Delegation System
 
-A Python-based Multi-Agent System that uses Google's Gemini model (via OpenAI API SDK) to delegate user queries to specialized agents—Web Developer, App Developer, and Marketing Agent—based on the task type. Built with Chainlit for real-time, chat-based interaction.
+A Python-based **Multi-Agent System** using Google's Gemini API via OpenAI SDK to intelligently route user queries to specialized agents — **Web Developer**, **App Developer**, or **Marketing Agent**. The system features a real-time chat interface powered by **Chainlit**.
 
-🚀 Features
-🤖 Intelligent Agent Manager to handle task routing.
+---
 
-🧩 Modular agent structure using agents.py.
+## 🚀 Features
 
-💬 Real-time user interaction with Chainlit.
+- 🤖 Intelligent agent manager that delegates based on input
+- 🧩 Modular and extendable architecture
+- 💬 Chat interface built using Chainlit
+- 🌐 Gemini integration via OpenAI SDK
+- 🔐 Secure API key management with dotenv
 
-🌐 Uses Google Gemini API via OpenAI SDK.
+---
 
-🔐 Environment variable support using dotenv.
+## 📁 Project Structure
+multi-agent-system/
+│
+├── main.py # Launches Chainlit and handles messages
+├── multi_agents.py # Defines the agents and manager logic
+├── .env # Environment variables
+└── README.md # Project documentation
 
-📂 Project Structure
-
-├── main.py              # Chainlit chat interface
-├── multi_agents.py      # Multi-agent definitions and logic
-├── .env                 # API keys and secrets
-└── README.md            # Project documentation
-
-🛠 Requirements
+# 🛠 Requirements
 
 Python 3.8+
 
@@ -32,7 +34,7 @@ chainlit
 
 OpenaiSDK (for Agent, Runner, etc.)
 
-📦 Installation
+# 📦 Installation
 Clone the repository:
 git clone https://github.com/abdulmoiz001CD/Multi-Agent-Handoff-System
 cd multi-agent-system
@@ -48,17 +50,17 @@ GEMINI_API_KEY=your_google_gemini_api_key
 ▶️ Running the App
 Use Chainlit to launch the chat interface:
 
-chainlit run main.py
+# chainlit run main.py
 You’ll see a browser window open with a chat interface. Type your task request, and the system will automatically delegate it to the correct agent.
 
-🧠 Agent Roles
+# 🧠 Agent Roles
 Agent	Task Description
 Web Developer	Builds responsive websites using modern frameworks.
 App Developer	Creates cross-platform mobile applications.
 Marketing Agent	Designs and executes marketing strategies.
 Manager (Main Agent)	Understands the user's input and delegates it to the right agent.
 
-📝 Example Usage
+# 📝 Example Usage
 Input: "I want to create an app for event booking"
 
 Response: Handled by App Developer
